@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:gainsboro;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color:black;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.form-field-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+
+.form-field.meet {
+    /* grid-column: span 1; */
+    grid-template-columns: repeat(2, 2fr);
+    width: 143%;
+
+}
+
+.form-field.other {
+    grid-column: span 2;
+    display: none;
+    margin-left: 80px;
+    /* grid-template-columns: repeat(1, 1fr); */
+}
+
+.form-field.width {
+    grid-column: 1 / span 3;
+}
+
+label, p {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    /* display: inline-block; */
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+}
+
+.err {
+    color: darkred;
+    display: none;
+    font-size: small;
+}
